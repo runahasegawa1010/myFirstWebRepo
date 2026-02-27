@@ -1,0 +1,25 @@
+meta {
+  name: Create habit / Not found
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:9812/pets/999/habits
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Workout",
+    "category": "fitness",
+    "targetFrequency": 3,
+    "statBoost": "energy"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

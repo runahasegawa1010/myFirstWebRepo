@@ -1,0 +1,20 @@
+meta {
+  name: Log habit for cooked pet
+  type: http
+  seq: 14
+}
+
+post {
+  url: http://localhost:9812/pets/1/logs
+  body: json
+  auth: inherit
+}
+
+body:json {
+  { "message": "This pet has been cooked. Adopt a new one." }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

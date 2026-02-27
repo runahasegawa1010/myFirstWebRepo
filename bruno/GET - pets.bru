@@ -1,0 +1,16 @@
+meta {
+  name: GET / pets
+  type: http
+  seq: 10
+}
+
+get {
+  url: http://localhost:9812/pets/1
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
